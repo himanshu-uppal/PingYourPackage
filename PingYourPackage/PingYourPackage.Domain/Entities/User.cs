@@ -8,12 +8,15 @@ using PingYourPackage.Domain.Abstract;
 
 namespace PingYourPackage.Domain.Entities
 {
-    public class User:IEntity
+    public class User : IEntity
     {
         [Key]
         public Guid Key { get; set; }
         [Required]
+        [StringLength(50)]
         public string Name { get; set; }
+        [Required]
+        [StringLength(320)]
         public string Email { get; set; }
         [Required]
         public string HashedPassword { get; set; }
@@ -24,9 +27,11 @@ namespace PingYourPackage.Domain.Entities
         public DateTime? LastUpdatedOn { get; set; }
 
         public virtual ICollection<UserRole> UserRoles { get; set; }
+        public virtual Affiliate Affiliate { get; set; }
         public User()
         {
             UserRoles = new HashSet<UserRole>();
+            Affiliate = new Affiliate();
 
         }
     }

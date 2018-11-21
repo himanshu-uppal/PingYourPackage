@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PingYourPackage.Domain.Abstract;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,17 +8,19 @@ using System.Threading.Tasks;
 
 namespace PingYourPackage.Domain.Entities
 {
-    public class Role
+    public class ShipmentType : IEntity
     {
         [Key]
         public Guid Key { get; set; }
         [Required]
         [StringLength(50)]
         public string Name { get; set; }
-        public virtual ICollection<UserRole> UserRoles { get; set; }
-        public Role()
+        public decimal Price { get; set; }
+        public DateTime CreatedOn { get; set; }
+        public virtual ICollection<Shipment> Shipments { get; set; }
+        public ShipmentType()
         {
-            UserRoles = new HashSet<UserRole>();
+            Shipments = new HashSet<Shipment>();
         }
     }
 }

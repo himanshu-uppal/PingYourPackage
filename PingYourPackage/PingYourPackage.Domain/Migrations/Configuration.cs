@@ -11,7 +11,7 @@ namespace PingYourPackage.Domain.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(EFDbContext context)

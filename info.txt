@@ -29,5 +29,8 @@ Install-Package EntityFramework
 --enable migrations----
  Enable-Migrations
 
+--- Add Migrations ---
+Add-Migration -Name "ValidationAttributeChanges" -StartUpProjectName PingYourPackage.API.WebHost
+
 
 

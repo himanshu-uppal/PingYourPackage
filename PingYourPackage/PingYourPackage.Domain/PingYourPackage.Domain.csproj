@@ -62,12 +62,25 @@
   <ItemGroup>
     <Compile Include="Abstract\IEntity.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
+    <Compile Include="Entities\Affiliate.cs" />
     <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\Shipment.cs" />
+    <Compile Include="Entities\ShipmentState.cs" />
+    <Compile Include="Entities\ShipmentStatus.cs" />
+    <Compile Include="Entities\ShipmentType.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\UserRole.cs" />
     <Compile Include="Migrations\201811210920536_Init.cs" />
     <Compile Include="Migrations\201811210920536_Init.Designer.cs">
       <DependentUpon>201811210920536_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811211120313_ValidationAttributeChanges.cs" />
+    <Compile Include="Migrations\201811211120313_ValidationAttributeChanges.Designer.cs">
+      <DependentUpon>201811211120313_ValidationAttributeChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811211141111_ValidationAttributeChanges1.cs" />
+    <Compile Include="Migrations\201811211141111_ValidationAttributeChanges1.Designer.cs">
+      <DependentUpon>201811211141111_ValidationAttributeChanges1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +92,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201811210920536_Init.resx">
       <DependentUpon>201811210920536_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811211120313_ValidationAttributeChanges.resx">
+      <DependentUpon>201811211120313_ValidationAttributeChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811211141111_ValidationAttributeChanges1.resx">
+      <DependentUpon>201811211141111_ValidationAttributeChanges1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
