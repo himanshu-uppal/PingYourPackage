@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingYourPackage.Domain", "PingYourPackage.Domain\PingYourPackage.Domain.csproj", "{5AE92154-625A-457B-B016-6FABAAB2B649}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingYourPackage.API", "PingYourPackage.API\PingYourPackage.API.csproj", "{A0371F5E-4CC9-437D-AE09-57DEF013C342}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5AE92154-625A-457B-B016-6FABAAB2B649}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AE92154-625A-457B-B016-6FABAAB2B649}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AE92154-625A-457B-B016-6FABAAB2B649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0371F5E-4CC9-437D-AE09-57DEF013C342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0371F5E-4CC9-437D-AE09-57DEF013C342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0371F5E-4CC9-437D-AE09-57DEF013C342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0371F5E-4CC9-437D-AE09-57DEF013C342}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

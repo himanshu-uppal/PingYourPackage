@@ -1,0 +1,17 @@
+---- Domain Project -----
+ the project containing the domain entities, data access logic(repositories), and application logic (service layer)
+
+---- API Project -------
+API project will hold the ASP.NET Web API components for building the HTTP API logic itself.
+These components contain controllers, message handlers, filters, custom parameter bindings, and other tools to
+maintain the project over time by separating the concerns. The PingYourPackage.API will hold the authentication and
+authorization logic, too.
+
+
+---- to install ASP Web API Components -----
+Install-Package Microsoft.AspNet.WebApi.Core -ProjectName PingYourPackage.API
+
+-------- ---------
+Autofac IoC Container. It is used to inject required dependencies, like repositories, into our controllers. The Autofac container neatly integrates with ASP.NET Web API
+and the appropriate NuGet package, for this is Autofac.WebApi, which refers to the core Autofac container
+Install-Package Autofac.WebApi -ProjectName PingYourPackage.API
