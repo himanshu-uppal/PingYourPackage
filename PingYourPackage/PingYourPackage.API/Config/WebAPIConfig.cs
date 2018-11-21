@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PingYourPackage.API.Config
 {
-    class WebAPIConfig
+    public class WebAPIConfig
     {
     }
 }

@@ -11,7 +11,18 @@ authorization logic, too.
 ---- to install ASP Web API Components -----
 Install-Package Microsoft.AspNet.WebApi.Core -ProjectName PingYourPackage.API
 
--------- ---------
+--------Autofac.WebApi ---------
 Autofac IoC Container. It is used to inject required dependencies, like repositories, into our controllers. The Autofac container neatly integrates with ASP.NET Web API
 and the appropriate NuGet package, for this is Autofac.WebApi, which refers to the core Autofac container
 Install-Package Autofac.WebApi -ProjectName PingYourPackage.API
+
+
+--------Microsoft.AspNet.WebApi.WebHost----------
+The first NuGet package to add is Microsoft.AspNet.WebApi.WebHost, which resolves all necessary ASP.NET
+Web API dependencies and also references them. The Microsoft.AspNet.WebApi.WebHost NuGet package depends
+on the Microsoft.AspNet.WebApi.Core package and brings a specific hosting component for ASP.NET.
+
+
+
+
+
