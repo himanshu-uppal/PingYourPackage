@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PingYourPackage.Domain.Entities
 {
-    class Role
+    public class Role
     {
         [Key]
         public Guid Key { get; set; }

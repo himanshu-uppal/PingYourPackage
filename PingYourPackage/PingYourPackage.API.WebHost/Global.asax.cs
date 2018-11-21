@@ -9,17 +9,19 @@ using System.Net.Http;
 
 
 
+
 namespace PingYourPackage.API.WebHost
 {
     public class MvcApplication : System.Web.HttpApplication
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            EFConfig.Initialize();
 
-            var config = GlobalConfiguration.Configuration;
-            RouteConfig.RegisterRoutes(config);
-            WebAPIConfig.Configure(config);
-            AutofacWebAPI.Initialize(config);
+            //var config = GlobalConfiguration.Configuration;
+            //RouteConfig.RegisterRoutes(config);
+            //WebAPIConfig.Configure(config);
+            //AutofacWebAPI.Initialize(config);
         }
     }
 }

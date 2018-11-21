@@ -8,7 +8,7 @@ using PingYourPackage.Domain.Abstract;
 
 namespace PingYourPackage.Domain.Entities
 {
-    class User:IEntity
+    public class User:IEntity
     {
         [Key]
         public Guid Key { get; set; }

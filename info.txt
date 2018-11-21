@@ -26,4 +26,8 @@ on the Microsoft.AspNet.WebApi.Core package and brings a specific hosting compon
 Install-Package EntityFramework
 
 
+--enable migrations----
+ Enable-Migrations
+
+
 
