@@ -22,7 +22,8 @@ The first NuGet package to add is Microsoft.AspNet.WebApi.WebHost, which resolve
 Web API dependencies and also references them. The Microsoft.AspNet.WebApi.WebHost NuGet package depends
 on the Microsoft.AspNet.WebApi.Core package and brings a specific hosting component for ASP.NET.
 
-
+--- install ENtity Framework -----
+Install-Package EntityFramework
 
 
 
