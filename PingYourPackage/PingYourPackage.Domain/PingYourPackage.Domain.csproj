@@ -74,6 +74,8 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\UserRole.cs" />
     <Compile Include="Extensions\IQueryableExtensions.cs" />
+    <Compile Include="Extensions\RoleRepositoryExtensions.cs" />
+    <Compile Include="Extensions\UserRepositoryExtensions.cs" />
     <Compile Include="Migrations\201811210920536_Init.cs" />
     <Compile Include="Migrations\201811210920536_Init.Designer.cs">
       <DependentUpon>201811210920536_Init.cs</DependentUpon>

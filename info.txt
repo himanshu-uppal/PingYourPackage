@@ -38,6 +38,10 @@ Add-Migration -Name "ValidationAttributeChanges" -StartUpProjectName PingYourPac
 and the implementation will be injected through an IoC container, which is the Autofac for our application.
 
 
-
+- created your database models by leveraging the Entity Framework code–first approach 
+- created a generic repository to gain access to the data.
+- introduced the service layer by implementing the membership and crypto services.
+- infrastructure such as routes, configuration
+- setting up the Inversion of Control (IoC) container
 
 
