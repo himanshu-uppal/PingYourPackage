@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PingYourPackage.Domain.Abstract
 {
-    interface IEntity
+    public interface IEntity
     {
         Guid Key { get; set; }
     }

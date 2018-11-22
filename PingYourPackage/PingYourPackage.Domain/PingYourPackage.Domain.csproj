@@ -61,7 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IEntity.cs" />
+    <Compile Include="Abstract\IEntityRepository.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
+    <Compile Include="Concrete\EntityRepository.cs" />
+    <Compile Include="Core\PaginatedList.cs" />
     <Compile Include="Entities\Affiliate.cs" />
     <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\Shipment.cs" />
@@ -70,6 +73,7 @@
     <Compile Include="Entities\ShipmentType.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\UserRole.cs" />
+    <Compile Include="Extensions\IQueryableExtensions.cs" />
     <Compile Include="Migrations\201811210920536_Init.cs" />
     <Compile Include="Migrations\201811210920536_Init.Designer.cs">
       <DependentUpon>201811210920536_Init.cs</DependentUpon>

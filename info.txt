@@ -34,3 +34,10 @@ Add-Migration -Name "ValidationAttributeChanges" -StartUpProjectName PingYourPac
 
 
 
+ When we need to work with the data—for example, inside a controller—we will be working with IEntityRepository<T> (e.g., IEntityRepository<User>),
+and the implementation will be injected through an IoC container, which is the Autofac for our application.
+
+
+
+
+
