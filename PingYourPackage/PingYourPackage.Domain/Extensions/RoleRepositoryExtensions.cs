@@ -11,8 +11,7 @@ namespace PingYourPackage.Domain.Extensions
 {
     public static class RoleRepositoryExtensions
     {
-        public static Role GetSingleByRoleName(
-        this IEntityRepository<Role> roleRepository, string roleName)
+        public static Role GetSingleByRoleName(this IEntityRepository<Role> roleRepository, string roleName)
         {
             return roleRepository.GetAll().FirstOrDefault(x => x.Name == roleName);
         }

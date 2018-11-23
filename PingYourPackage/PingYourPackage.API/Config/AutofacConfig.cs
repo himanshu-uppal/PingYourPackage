@@ -11,6 +11,7 @@ using System.Reflection;
 using PingYourPackage.Domain.Concrete;
 using System.Data.Entity;
 using PingYourPackage.Domain.Abstract;
+using PingYourPackage.Domain.Services;
 
 namespace PingYourPackage.API.Config
 {
@@ -33,20 +34,28 @@ namespace PingYourPackage.API.Config
             Assembly.GetExecutingAssembly())
             .PropertiesAutowired();
 
+
             //EF DbContext
             builder.RegisterType<EFDbContext>()
-             .As<DbContext>().InstancePerApiRequest();
+            .As<DbContext>().InstancePerRequest();
 
             //Repositories
             // Register repositories by using Autofac's OpenGenerics feature
-            // More info: http://code.google.com/p/autofac/wiki/OpenGenerics
+
             builder.RegisterGeneric(typeof(EntityRepository<>))
             .As(typeof(IEntityRepository<>))
-            .InstancePerApiRequest();
+            .InstancePerRequest();
 
 
             //Services
+
+            //Shipment Services
+            builder.RegisterType<ShipmentService>()
+            .As<IShipmentService>()
+            .InstancePerRequest();
+
             return builder.Build();
+
         }
     }
 }

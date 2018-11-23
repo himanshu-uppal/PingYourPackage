@@ -8,10 +8,10 @@ namespace PingYourPackage.API.Model.RequestCommands
 {
     public class PaginatedRequestCommand : IRequestCommand
     {
-        [Minimum(1)]
+        //[Minimum(1)]
         public int Page { get; set; }
-        [Minimum(1)]
-        [Maximum(50)]
+        //[Minimum(1)]
+        //[Maximum(50)]
         public int Take { get; set; }
     }
 }

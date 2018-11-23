@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PingYourPackage.Domain.Abstract;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PingYourPackage.Domain.Entities
 {
-    public class Role
+    public class Role : IEntity
     {
         [Key]
         public Guid Key { get; set; }

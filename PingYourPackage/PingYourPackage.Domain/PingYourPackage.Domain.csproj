@@ -90,6 +90,10 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IShipmentService.cs" />
+    <Compile Include="Services\OperationResult.cs" />
+    <Compile Include="Services\OperationResultOfEntity.cs" />
+    <Compile Include="Services\ShipmentService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

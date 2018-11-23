@@ -6,9 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Net.Http;
-
-
-
+using PingYourPackage.API.Config;
 
 namespace PingYourPackage.API.WebHost
 {
@@ -18,10 +16,11 @@ namespace PingYourPackage.API.WebHost
         {
             EFConfig.Initialize();
 
-            //var config = GlobalConfiguration.Configuration;
-            //RouteConfig.RegisterRoutes(config);
-            //WebAPIConfig.Configure(config);
-            //AutofacWebAPI.Initialize(config);
+            var config = GlobalConfiguration.Configuration;
+            RouteConfig.RegisterRoutes(config);
+            WebAPIConfig.Configure(config);
+            AutofacWebAPI.Initialize(config);
+            EFConfig.Initialize();
         }
     }
 }

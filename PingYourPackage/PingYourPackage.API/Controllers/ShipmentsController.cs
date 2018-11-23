@@ -1,10 +1,13 @@
-﻿using PingYourPackage.API.Model.Dtos;
+﻿using PingYourPackage.API.Model;
+using PingYourPackage.API.Model.Dtos;
 using PingYourPackage.API.Model.RequestCommands;
+using PingYourPackage.Domain.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Http;
 
 /*
  * 
@@ -15,10 +18,14 @@ using System.Threading.Tasks;
  */
 namespace PingYourPackage.API.Controllers
 {
-    public class ShipmentsController
+    public class ShipmentsController :ApiController
     {
-        public PaginatedDto<ShipmentDto>
- GetShipments(PaginatedRequestCommand cmd)
+        private readonly IShipmentService _shipmentService;
+        public ShipmentsController(IShipmentService shipmentService)
+        {
+            _shipmentService = shipmentService;
+        }
+        public PaginatedDto<ShipmentDto> GetShipments(PaginatedRequestCommand cmd)
         {
             var shipments = _shipmentService
             .GetShipments(cmd.Page, cmd.Take);
