@@ -8,6 +8,9 @@ using System.Web.Http;
 using Autofac;
 using Autofac.Integration.WebApi;
 using System.Reflection;
+using PingYourPackage.Domain.Concrete;
+using System.Data.Entity;
+using PingYourPackage.Domain.Abstract;
 
 namespace PingYourPackage.API.Config
 {
@@ -26,8 +29,23 @@ namespace PingYourPackage.API.Config
         }
         private static IContainer RegisterServices(ContainerBuilder builder)
         {
-            builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
-            // registration goes here
+            builder.RegisterAssemblyTypes(
+            Assembly.GetExecutingAssembly())
+            .PropertiesAutowired();
+
+            //EF DbContext
+            builder.RegisterType<EFDbContext>()
+             .As<DbContext>().InstancePerApiRequest();
+
+            //Repositories
+            // Register repositories by using Autofac's OpenGenerics feature
+            // More info: http://code.google.com/p/autofac/wiki/OpenGenerics
+            builder.RegisterGeneric(typeof(EntityRepository<>))
+            .As(typeof(IEntityRepository<>))
+            .InstancePerApiRequest();
+
+
+            //Services
             return builder.Build();
         }
     }
