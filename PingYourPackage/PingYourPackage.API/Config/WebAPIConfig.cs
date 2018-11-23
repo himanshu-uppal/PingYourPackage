@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PingYourPackage.API.Formatting;
+using PingYourPackage.API.MessageHandlers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Formatting;
@@ -32,6 +34,10 @@ namespace PingYourPackage.API.Config
             typeof(IContentNegotiator),
             new DefaultContentNegotiator(
             excludeMatchOnTypeOnly: true));
+
+            // Message Handlers
+            config.MessageHandlers.Add(
+            new RequireHttpsMessageHandler());
 
             config.Services.RemoveAll(
             typeof(ModelValidatorProvider),
