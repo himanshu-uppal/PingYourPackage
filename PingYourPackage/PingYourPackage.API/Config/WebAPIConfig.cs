@@ -43,6 +43,13 @@ namespace PingYourPackage.API.Config
             typeof(ModelValidatorProvider),
                validator => !(validator
             is DataAnnotationsModelValidatorProvider));
+
+            config.ParameterBindingRules.Insert(0,
+ descriptor => typeof(IRequestCommand)
+ .IsAssignableFrom(
+ descriptor.ParameterType)
+ ? new FromUriAttribute()
+ .GetBinding(descriptor) : null);
         }
     }
 }
