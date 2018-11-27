@@ -14,10 +14,15 @@ namespace PingYourPackage.API.Config
         {
             var routes = config.Routes;
             routes.MapHttpRoute(
-            "DefaultHttpRoute",
-            "api/{controller}/{key}",
-            defaults: new { key = RouteParameter.Optional },
-            constraints: new { key = new GuidRouteConstraint() });
+                    "DefaultHttpRoute",
+                    "api/{controller}/{key}",
+                    defaults: new { key = RouteParameter.Optional });
+            //constraints: new { key = new GuidRouteConstraint() });
+
+            routes.MapHttpRoute(
+                    "Default",
+                    "api/{controller}/{key}",
+                    defaults: new { key = RouteParameter.Optional });
         }
     }
 }

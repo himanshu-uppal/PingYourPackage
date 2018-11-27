@@ -18,6 +18,7 @@ using System.Web.Http;
  */
 namespace PingYourPackage.API.Controllers
 {
+    [Route("DefaultHttpRoute")]
     public class ShipmentsController :ApiController
     {
         private readonly IShipmentService _shipmentService;
@@ -25,10 +26,16 @@ namespace PingYourPackage.API.Controllers
         {
             _shipmentService = shipmentService;
         }
-        public PaginatedDto<ShipmentDto> GetShipments(PaginatedRequestCommand cmd)
+        //public PaginatedDto<ShipmentDto> GetShipments(PaginatedRequestCommand cmd)
+        //{
+        //    var shipments = _shipmentService
+        //    .GetShipments(cmd.Page, cmd.Take);
+        //    return shipments.ToPaginatedDto(
+        //    shipments.Select(sh => sh.ToShipmentDto()));
+        //}
+        public PaginatedDto<ShipmentDto> GetShipments()
         {
-            var shipments = _shipmentService
-            .GetShipments(cmd.Page, cmd.Take);
+            var shipments = _shipmentService.GetShipments(2,3);
             return shipments.ToPaginatedDto(
             shipments.Select(sh => sh.ToShipmentDto()));
         }

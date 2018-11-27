@@ -14,7 +14,7 @@ namespace PingYourPackage.API.WebHost
     {
         protected void Application_Start(object sender, EventArgs e)
         {
-            EFConfig.Initialize();
+           
 
             var config = GlobalConfiguration.Configuration;
             RouteConfig.RegisterRoutes(config);
