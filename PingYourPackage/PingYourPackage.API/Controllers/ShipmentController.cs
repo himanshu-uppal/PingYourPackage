@@ -1,6 +1,5 @@
-﻿using PingYourPackage.API.Model;
+﻿using PingYourPackage.API.Extensions;
 using PingYourPackage.API.Model.Dtos;
-using PingYourPackage.API.Model.RequestCommands;
 using PingYourPackage.Domain.Services;
 using System;
 using System.Collections.Generic;
@@ -9,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-/*
- * 
- * GET /api/shipments
- * GET /api/shipments/{key}
- * POST /api/shipments
- * PUT /api/shipments/{key}
- */
 namespace PingYourPackage.API.Controllers
 {
-    [Route("DefaultHttpRoute")]
-    public class ShipmentsController :ApiController
+    [System.Web.Http.Route("DefaultHttpRoute")]
+    public class ShipmentController : ApiController
     {
         private readonly IShipmentService _shipmentService;
-        public ShipmentsController(IShipmentService shipmentService)
+        public ShipmentController(IShipmentService shipmentService)
         {
             _shipmentService = shipmentService;
         }
@@ -35,9 +27,9 @@ namespace PingYourPackage.API.Controllers
         //}
         public PaginatedDto<ShipmentDto> GetShipments()
         {
-            var shipments = _shipmentService.GetShipments(2,3);
+            var shipments = _shipmentService.GetShipments(2, 3);
             return shipments.ToPaginatedDto(
             shipments.Select(sh => sh.ToShipmentDto()));
         }
     }
-}
+    }

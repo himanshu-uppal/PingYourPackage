@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PingYourPackage.API.Model
+namespace PingYourPackage.API.Extensions
 {
 
     internal static class ShipmentStateExtensions

@@ -13,8 +13,7 @@ namespace PingYourPackage.API.WebHost
     public class MvcApplication : System.Web.HttpApplication
     {
         protected void Application_Start(object sender, EventArgs e)
-        {
-           
+        {          
 
             var config = GlobalConfiguration.Configuration;
             RouteConfig.RegisterRoutes(config);

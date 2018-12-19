@@ -117,5 +117,11 @@
       <DependentUpon>201811261128341_firstmigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PingYourPackage.API.Model\PingYourPackage.API.Model.csproj">
+      <Project>{4578e1a3-6a98-4a16-b4d5-11215e12f299}</Project>
+      <Name>PingYourPackage.API.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

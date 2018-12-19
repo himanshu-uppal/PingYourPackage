@@ -94,13 +94,13 @@
     <Compile Include="Config\AutofacConfig.cs" />
     <Compile Include="Config\RouteConfig.cs" />
     <Compile Include="Config\WebAPIConfig.cs" />
-    <Compile Include="Controllers\ShipmentsController.cs" />
+    <Compile Include="Controllers\ShipmentController.cs" />
     <Compile Include="Formatting\SuppressesRequiredMemberSelector.cs" />
     <Compile Include="MessageHandlers\RequireHttpsMessageHandler.cs" />
-    <Compile Include="Model\PaginatedListExtensions.cs" />
-    <Compile Include="Model\ShipmentExtensions.cs" />
-    <Compile Include="Model\ShipmentStateExtensions.cs" />
-    <Compile Include="Model\ShipmentTypeExtensions.cs" />
+    <Compile Include="Extensions\PaginatedListExtensions.cs" />
+    <Compile Include="Extensions\ShipmentExtensions.cs" />
+    <Compile Include="Extensions\ShipmentStateExtensions.cs" />
+    <Compile Include="Extensions\ShipmentTypeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routing\GuidRouteConstraint.cs" />
   </ItemGroup>

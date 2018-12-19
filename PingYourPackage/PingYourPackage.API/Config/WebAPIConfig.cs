@@ -37,8 +37,8 @@ namespace PingYourPackage.API.Config
             excludeMatchOnTypeOnly: true));
 
             // Message Handlers
-            config.MessageHandlers.Add(
-            new RequireHttpsMessageHandler());
+            //config.MessageHandlers.Add(
+            //new RequireHttpsMessageHandler());
 
             config.Services.RemoveAll(
             typeof(ModelValidatorProvider),

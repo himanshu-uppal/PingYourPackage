@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using PingYourPackage.API.Model.Dtos;
 namespace PingYourPackage.Domain.Core
 {
     public class PaginatedList<T> : List<T>
@@ -36,5 +36,7 @@ namespace PingYourPackage.Domain.Core
                 return (PageIndex < TotalPageCount);
             }
         }
+
+        
     }
 }
